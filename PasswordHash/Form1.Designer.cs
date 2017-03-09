@@ -40,6 +40,7 @@
             this.button_RIPEMD160 = new System.Windows.Forms.Button();
             this.groupBox_deprecated = new System.Windows.Forms.GroupBox();
             this.groupBox_actual = new System.Windows.Forms.GroupBox();
+            this.button1_Blake2b = new System.Windows.Forms.Button();
             this.button1_sha384 = new System.Windows.Forms.Button();
             this.groupBox_deprecated.SuspendLayout();
             this.groupBox_actual.SuspendLayout();
@@ -60,7 +61,6 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox1_result.Location = new System.Drawing.Point(16, 87);
             this.textBox1_result.Name = "textBox1_result";
-            this.textBox1_result.ReadOnly = true;
             this.textBox1_result.Size = new System.Drawing.Size(756, 20);
             this.textBox1_result.TabIndex = 1;
             // 
@@ -106,7 +106,7 @@
             // 
             // button1_sha1
             // 
-            this.button1_sha1.Location = new System.Drawing.Point(15, 24);
+            this.button1_sha1.Location = new System.Drawing.Point(6, 24);
             this.button1_sha1.Name = "button1_sha1";
             this.button1_sha1.Size = new System.Drawing.Size(75, 23);
             this.button1_sha1.TabIndex = 6;
@@ -116,7 +116,7 @@
             // 
             // button_MD5
             // 
-            this.button_MD5.Location = new System.Drawing.Point(96, 24);
+            this.button_MD5.Location = new System.Drawing.Point(168, 24);
             this.button_MD5.Name = "button_MD5";
             this.button_MD5.Size = new System.Drawing.Size(75, 23);
             this.button_MD5.TabIndex = 7;
@@ -126,7 +126,7 @@
             // 
             // button_RIPEMD160
             // 
-            this.button_RIPEMD160.Location = new System.Drawing.Point(249, 19);
+            this.button_RIPEMD160.Location = new System.Drawing.Point(87, 24);
             this.button_RIPEMD160.Name = "button_RIPEMD160";
             this.button_RIPEMD160.Size = new System.Drawing.Size(75, 23);
             this.button_RIPEMD160.TabIndex = 5;
@@ -137,6 +137,7 @@
             // groupBox_deprecated
             // 
             this.groupBox_deprecated.Controls.Add(this.button1_sha1);
+            this.groupBox_deprecated.Controls.Add(this.button_RIPEMD160);
             this.groupBox_deprecated.Controls.Add(this.button_MD5);
             this.groupBox_deprecated.Location = new System.Drawing.Point(22, 248);
             this.groupBox_deprecated.Name = "groupBox_deprecated";
@@ -147,8 +148,8 @@
             // 
             // groupBox_actual
             // 
+            this.groupBox_actual.Controls.Add(this.button1_Blake2b);
             this.groupBox_actual.Controls.Add(this.button1_sha384);
-            this.groupBox_actual.Controls.Add(this.button_RIPEMD160);
             this.groupBox_actual.Controls.Add(this.button1_sha256);
             this.groupBox_actual.Controls.Add(this.button1_sha512);
             this.groupBox_actual.Location = new System.Drawing.Point(22, 128);
@@ -157,6 +158,16 @@
             this.groupBox_actual.TabIndex = 9;
             this.groupBox_actual.TabStop = false;
             this.groupBox_actual.Text = "Actual";
+            // 
+            // button1_Blake2b
+            // 
+            this.button1_Blake2b.Location = new System.Drawing.Point(249, 19);
+            this.button1_Blake2b.Name = "button1_Blake2b";
+            this.button1_Blake2b.Size = new System.Drawing.Size(75, 23);
+            this.button1_Blake2b.TabIndex = 5;
+            this.button1_Blake2b.Text = "Blake2B";
+            this.button1_Blake2b.UseVisualStyleBackColor = true;
+            this.button1_Blake2b.Click += new System.EventHandler(this.button1_Blake2b_Click);
             // 
             // button1_sha384
             // 
@@ -207,6 +218,7 @@
         private System.Windows.Forms.GroupBox groupBox_deprecated;
         private System.Windows.Forms.GroupBox groupBox_actual;
         private System.Windows.Forms.Button button1_sha384;
+        private System.Windows.Forms.Button button1_Blake2b;
     }
 }
 
