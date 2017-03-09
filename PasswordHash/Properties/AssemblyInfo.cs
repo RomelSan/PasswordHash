@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("PasswordHash")]
 [assembly: AssemblyDescription("Text to Hash Generator")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("CoreLabs")]
+[assembly: AssemblyCompany("Romel Vera")]
 [assembly: AssemblyProduct("PasswordHash")]
-[assembly: AssemblyCopyright("Romel Vera Cadena Copyright © 2016")]
+[assembly: AssemblyCopyright("Romel Vera Cadena Copyright © 2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -32,5 +32,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.0.0")]
-[assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: AssemblyVersion("1.1.0.0")]
+[assembly: AssemblyFileVersion("1.1.0.0")]
