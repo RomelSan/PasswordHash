@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Security.Cryptography;
+using Crypto;
 
 namespace PasswordHash
 {
@@ -18,6 +19,18 @@ namespace PasswordHash
             InitializeComponent();
         }
         #region Hash Functions
+        public static string getBlake2b(string text)
+        {
+            byte[] bytes = Encoding.UTF8.GetBytes(text);
+            Blake2B hashstring = new Blake2B();
+            byte[] hash = hashstring.ComputeHash(bytes);
+            string hashString = string.Empty;
+            foreach (byte x in hash)
+            {
+                hashString += String.Format("{0:x2}", x);
+            }
+            return hashString;
+        }
         public static string getHashSha3(string text)
         {
             byte[] bytes = Encoding.UTF8.GetBytes(text);
@@ -108,6 +121,13 @@ namespace PasswordHash
         }
 
         // Buttons ---------------------------------------------
+        private void button1_Blake2b_Click(object sender, EventArgs e)
+        {
+            string password_toHash = textBox1_password.Text;
+            string hash_result = getBlake2b(password_toHash);
+            textBox1_result.Text = hash_result;
+        }
+
         private void button1_sha256_Click(object sender, EventArgs e)
         {
             string password_toHash = textBox1_password.Text;
